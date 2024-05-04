@@ -1,38 +1,97 @@
+
+/* General styles for the entire app */
 .App {
+  font-family: 'Poppins', sans-serif; /* Setting the font to Poppins */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  /* background-color: #f4f4f4; */
+}
+
+/* Styling the header */
+h1 {
   text-align: center;
+  font-weight: bolder;  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title-green {
+  color: #00B04F;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title-black {
+  color: #000000; 
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Form styling */
+form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: transparent; /* Remove any background color from the form itself */
+  padding: 5px;
+  align-items: center; /* Align items vertically */
+  box-shadow: none;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 15px 20px;
+  border: 2px solid #f4f4f4; 
+  background-color: #f4f4f4; 
+  border-radius: 40px; 
+  margin-right:10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1); 
+  font-family: poppins;
+}
+
+button {
+  padding: 15px 20px;
+  margin-right:10px;
+  border-radius: 50px; 
+  background-color: #00B04F; 
   color: white;
+  border: none;
+  font-family: poppins; 
+  
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #00873B; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #bbb;
+}
+
+.task-list {
+  margin-top: 30px; 
+}
+
+/* Button styles inside tasks */
+li button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #888;
+}
+
+li button:hover {
+  color: #555;
 }
