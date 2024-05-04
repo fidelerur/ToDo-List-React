@@ -20,6 +20,7 @@ function App() {
 
 
   useEffect(() => {
+    if (!tasks.length) return;
     localStorage.setItem('tasks', JSON.stringify(tasks));
 
   }, [tasks]);
