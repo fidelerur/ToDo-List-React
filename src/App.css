@@ -1,14 +1,13 @@
 
-/* General styles for the entire app */
+
 .App {
-  font-family: 'Poppins', sans-serif; /* Setting the font to Poppins */
+  font-family: 'Poppins', sans-serif; 
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  /* background-color: #f4f4f4; */
 }
 
-/* Styling the header */
+
 h1 {
   text-align: center;
   font-weight: bolder;  
@@ -23,14 +22,15 @@ h1 {
 
 }
 
-/* Form styling */
+
 form {
   display: flex;
-  background-color: transparent; /* Remove any background color from the form itself */
+  background-color: transparent; 
   padding: 5px;
-  align-items: center; /* Align items vertically */
+  align-items: center; 
   box-shadow: none;
-  margin-bottom: 30px;
+  margin-top: 60px;
+  margin-bottom: 10px;
 }
 
 input[type="text"] {
@@ -39,20 +39,36 @@ input[type="text"] {
   border: 2px solid #f4f4f4; 
   background-color: #f4f4f4; 
   border-radius: 40px; 
-  margin-right:10px;
+  margin-right: 10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1); 
   font-family: poppins;
 }
 
-button {
+.btn {
   padding: 15px 20px;
-  margin-right:10px;
   border-radius: 50px; 
   background-color: #00B04F; 
   color: white;
   border: none;
   font-family: poppins; 
-  
+}
+
+button {
+  padding: 15px 20px;
+  margin-right: 25px;
+  border-radius: 50px; 
+  background-color: #00B04F; 
+  color: white;
+  border: none;
+  font-family: poppins; 
+}
+
+select {
+  padding: 10px 15px;
+  margin-left: 20px;
+  border-radius: 10px;  
+  font-family: poppins;
+  margin-bottom: 70px;
 }
 
 button:hover {
@@ -80,18 +96,62 @@ li.completed {
   color: #bbb;
 }
 
-.task-list {
-  margin-top: 30px; 
+.task-list-header {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: #eee;
+  font-weight: bold;
+  margin: 0 10px;  
 }
 
-/* Button styles inside tasks */
-li button {
-  border: none;
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  margin: 5px 10px;
+}
+
+
+.task-item .task-content {
+  flex-grow: 1; 
+  display: flex;
+  align-items: center; 
+}
+
+.task-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+
+.task-item .status {
+  padding: 0 20px; 
+  text-align: center;
+}
+
+
+.task-item .clear {
+  width: 158px; 
+  display: flex;
+  justify-content: flex-end;
+}
+
+.task-item .clear button {
   background: none;
+  border: none;
   cursor: pointer;
-  color: #888;
+  width: 1px;  
 }
 
-li button:hover {
-  color: #555;
+.task-item .clear button :hover{
+color: red; 
 }
+
+
+
